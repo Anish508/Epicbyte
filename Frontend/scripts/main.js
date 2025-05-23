@@ -4,19 +4,27 @@
         video.play();
     }
 });
+ */
 
 
+const imageList = [
+    "../images/img1.avif",
+    "../images/img2.avif",
+    "../images/img3.avif",
+    "../images/img4.avif",
+  ];
 
-document.addEventListener("DOMContentLoaded", function(){
-  const arr = ["img/img6.jpg", "img/img5.jpg", "img/img4.jpg", "img/img3.jpg"]
-  currentIndex = 0
-  let slider = document.getElementById('slider')
+  let current = 0;
+  const heroImage = document.getElementById("hero-image");
 
-  setInterval(()=>{
-    currentIndex = (currentIndex+1) % arr.length
-    slider.src = arr[currentIndex]
-  },1000)
-}) */
+  setInterval(() => {
+    current = (current + 1) % imageList.length;
+    heroImage.style.opacity = 0;
+    setTimeout(() => {
+      heroImage.src = imageList[current];
+      heroImage.style.opacity = 1;
+    }, 250);
+  }, 1500);
 
 function delay(n) {
   n = n || 2000;

@@ -9,21 +9,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/hero.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
 
   <body data-barba="wrapper">
-
     <div class="load-container">
       <div class="load-screen"></div>
     </div>
-    
+
     <div id="loader">
       <h3>Tomorrow's</h3>
       <h3>Brand</h3>
@@ -36,7 +38,13 @@
     </button>
 
     <nav class="menu navigation" aria-hidden="true">
-      <button class="btn-close" aria-label="Close menu" style="background-color:white;">&times;</button>
+      <button
+        class="btn-close"
+        aria-label="Close menu"
+        style="background-color: white"
+      >
+        &times;
+      </button>
       <ul class="links-container">
         <li><a href="./home.html" class="menu-link home">Home</a></li>
         <li><a href="#" class="menu-link places">Places</a></li>
@@ -46,36 +54,168 @@
     </nav>
 
     <main class="hero" data-barba="container" data-barba-namespace="Home">
-      <div class="sub-hero">
-        <div class="sub-hero-left">
-          <h1>
-            <span>r</span><span>e</span><span>j</span><span>o</span
-            ><span>u</span><span>i</span><span>c</span><span>e</span>
-          </h1>
-          <h2 class="animate-this">Your Next Digital Journey Begins Here</h2>
-          <p class="animate-this">
-            Crafting experiences that resonate. Discover how Rejouice helps
-            brands grow with bold design and smart tech.
-          </p>
-          <div class="cta-buttons">
-            <button class="btn primary">Get Started</button>
-            <button class="btn secondary">Learn More</button>
+      <div>
+        <div class="container py-4">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="networking">
+                <h2 class="display-5 heading">
+                  Networking <span class="brand-name"> solutions </span> for
+                  worldwide communication
+                </h2>
+                <p class="text-muted">
+                  We're a company that focuses on establishing long-term
+                  relationships with customers.
+                </p>
+                <button
+                  type="button"
+                  id="change-lang"
+                  class="btn btn-primary rounded-pill px-4 py-3"
+                >
+                  Explore Now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="img">
+                <img
+                  src="https://img.freepik.com/free-vector/endpoint-concept-illustration_114360-6375.jpg?w=740&t=st=1666852595~exp=1666853195~hmac=3a207fff771155f287a29ed1dabc6ab37e6bdb5141a29c56711b772023ff9865"
+                  alt="communication"
+                  class="w-100"
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sub-hero-right">
-           <img id="hero-image" src="../images/img4.avif" alt="Rejouice Feature" />
+      </div>
+
+      <!-- Why to choose us -->
+      <div class="px-4 py-5 my-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="../images/logo.webp"
+          alt=""
+          width="200"
+          height="200"
+        />
+        <h1 class="display-5 fw-bold text-body-emphasis">
+          Why to choose Bodhify?
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 gap-3"
+              fdprocessedid="xbhndm"
+            >
+              Primary button
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-lg px-4"
+              fdprocessedid="v8uypr"
+            >
+              Secondary
+            </button>
+          </div>
         </div>
       </div>
+
+      <!-- services cards -->
+      <section class="services-section text-center">
+        <div class="container">
+          <h2 class="mb-4">Our Services</h2>
+          <div class="overflow-hidden">
+            <div class="card-slider d-flex" id="cardSlider">
+              <!-- Service Card 1 -->
+              <div class="service-card">
+                <img
+                  src="https://via.placeholder.com/300x180"
+                  alt="Service 1"
+                />
+                <div class="card-body">
+                  <div class="card-title">Web Development</div>
+                  <p class="card-text">
+                    Modern and responsive websites using latest tech stack.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Service Card 2 -->
+              <div class="service-card">
+                <img
+                  src="https://via.placeholder.com/300x180"
+                  alt="Service 2"
+                />
+                <div class="card-body">
+                  <div class="card-title">UI/UX Design</div>
+                  <p class="card-text">
+                    Interactive user-centered design for better engagement.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Service Card 3 -->
+              <div class="service-card">
+                <img
+                  src="https://via.placeholder.com/300x180"
+                  alt="Service 3"
+                />
+                <div class="card-body">
+                  <div class="card-title">Automation</div>
+                  <p class="card-text">
+                    Streamline your business with custom automation tools.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Service Card 4 -->
+              <div class="service-card">
+                <img
+                  src="https://via.placeholder.com/300x180"
+                  alt="Service 4"
+                />
+                <div class="card-body">
+                  <div class="card-title">Analytics</div>
+                  <p class="card-text">
+                    Turn data into insights using smart dashboards and tools.
+                  </p>
+                  <a href="#" class="read-more"
+                    >Read More <i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-  <script src="js/aos.min.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="../scripts/barba.umd.min (1).js"></script>
-  <script src="../scripts/gsap.min.js"></script>
-  <script src="../scripts/jquery-3.7.1.min.js"></script>
-  <script src="../scripts/main.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../scripts/barba.umd.min (1).js"></script>
+    <script src="../scripts/gsap.min.js"></script>
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/nav-script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

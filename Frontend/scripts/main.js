@@ -1,36 +1,3 @@
-$(document).ready(function () {
-  $("#change-lang").find(html).attr("lang");
-});
-
-
-function autoSlide() {
-  const slider = document.getElementById("cardSlider");
-  if (!slider) return;
-
-  const cardWidth = 320; // 300px card + 20px gap
-  const cardCount = slider.children.length;
-
-  let index = 0;
-
-  function slide() {
-    gsap.to(slider, {
-      x: -cardWidth * index,
-      duration: 1,
-      ease: "power1.inOut",
-      onComplete: () => {
-        index++;
-        if (index >= cardCount) {
-          index = 0;
-          gsap.set(slider, { x: 0 });
-        }
-        setTimeout(slide, 2500);
-      },
-    });
-  }
-
-  setTimeout(slide, 2500);
-}
-
 function delay(n) {
   n = n || 2000;
   return new Promise((done) => {

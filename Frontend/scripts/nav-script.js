@@ -42,7 +42,7 @@ tl.to("#loader",{
   opacity:0,
 })
 
-tl.from(".sub-hero h1 span",{
+tl.from(".networking h1 span",{
   y:100,
   opacity:0,
   stagger:0.1,
@@ -55,5 +55,7 @@ tl.to("#loader",{
 })
 }
 loader();
+
+
 
 

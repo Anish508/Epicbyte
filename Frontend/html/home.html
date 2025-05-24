@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,6 +19,10 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
   </head>
 
@@ -38,7 +43,9 @@
     </button>
 
     <nav class="menu navigation" aria-hidden="true">
-      <button class="btn-close" aria-label="Close menu" style="color:white;">&times;</button>
+      <button class="btn-close" aria-label="Close menu" style="color: white">
+        &times;
+      </button>
       <button
         class="btn-close"
         aria-label="Close menu"
@@ -54,24 +61,33 @@
       </ul>
     </nav>
 
-    <main class="hero" data-barba="container" data-barba-namespace="Home">
+    <main
+      class="hero"
+      data-barba="container"
+      data-barba-namespace="Home"
+      style="margin-top: 14rem"
+    >
       <div>
-        <div class="container py-4">
+        <div class="container" style="margin-top: 45rem">
           <div class="row">
             <div class="col-md-5">
               <div class="networking">
-                <h2 class="display-5 heading">
+                <h1>
+                  <span>B</span><span>O</span><span>D</span><span>H</span
+                  ><span>I</span><span>F</span><span>Y</span>
+                </h1>
+                <h2 class="display-5 heading animate-this">
                   Networking <span class="brand-name"> solutions </span> for
                   worldwide communication
                 </h2>
-                <p class="text-muted">
+                <p class="text-muted animate-this">
                   We're a company that focuses on establishing long-term
                   relationships with customers.
                 </p>
                 <button
                   type="button"
                   id="change-lang"
-                  class="btn btn-primary rounded-pill px-4 py-3"
+                  class="btn btn-primary rounded-pill px-4 py-3 mt-8"
                 >
                   Explore Now
                 </button>
@@ -89,18 +105,17 @@
           </div>
         </div>
       </div>
-
       <!-- Why to choose us -->
-      <div class="px-4 py-5 my-5 text-center">
+      <div class="px-4 py-5 my-1 text-center mt-0">
         <img
           class="d-block mx-auto mb-4"
           src="../images/logo.webp"
           alt=""
-          width="200"
-          height="200"
+          width="150"
+          height="150"
         />
         <h1 class="display-5 fw-bold text-body-emphasis">
-          Why to choose Bodhify?
+          Why to choose Bodhify.tech?
         </h1>
         <div class="col-lg-6 mx-auto">
           <p class="lead mb-4">
@@ -113,14 +128,14 @@
             <button
               type="button"
               class="btn btn-primary btn-lg px-4 gap-3"
-              fdprocessedid="xbhndm"
+              fdprocessedid="hs6boh"
             >
               Primary button
             </button>
             <button
               type="button"
               class="btn btn-outline-secondary btn-lg px-4"
-              fdprocessedid="v8uypr"
+              fdprocessedid="kmjmbf"
             >
               Secondary
             </button>
@@ -128,77 +143,176 @@
         </div>
       </div>
 
-      <!-- services cards -->
-      <section class="services-section text-center">
-        <div class="container">
-          <h2 class="mb-4">Our Services</h2>
-          <div class="overflow-hidden">
-            <div class="card-slider d-flex" id="cardSlider">
-              <!-- Service Card 1 -->
-              <div class="service-card">
-                <img
-                  src="https://via.placeholder.com/300x180"
-                  alt="Service 1"
-                />
-                <div class="card-body">
-                  <div class="card-title">Web Development</div>
-                  <p class="card-text">
-                    Modern and responsive websites using latest tech stack.
+      <!--  services -->
+      <section class="w-full max-w-6xl mx-auto px-4 py-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800"
+        >
+          Our Services
+        </h2>
+
+        <!-- Swiper Container -->
+        <div class="relative">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Card 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images/logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 1"
+                  />
+                  <p class="text-sm text-blue-500 uppercase font-semibold">
+                    Service
                   </p>
-                  <a href="#" class="read-more"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                  <p class="text-gray-600 text-sm">
+                    We build scalable and fast web solutions tailored to your
+                    business goals.
+                  </p>
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
                 </div>
               </div>
-              <!-- Service Card 2 -->
-              <div class="service-card">
-                <img
-                  src="https://via.placeholder.com/300x180"
-                  alt="Service 2"
-                />
-                <div class="card-body">
-                  <div class="card-title">UI/UX Design</div>
-                  <p class="card-text">
-                    Interactive user-centered design for better engagement.
+
+              <!-- Card 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images//logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 2"
+                  />
+                  <p class="text-sm text-green-500 uppercase font-semibold">
+                    Service
                   </p>
-                  <a href="#" class="read-more"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                  <p class="text-gray-600 text-sm">
+                    Creating intuitive and engaging user interfaces for modern
+                    experiences.
+                  </p>
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
                 </div>
               </div>
-              <!-- Service Card 3 -->
-              <div class="service-card">
-                <img
-                  src="https://via.placeholder.com/300x180"
-                  alt="Service 3"
-                />
-                <div class="card-body">
-                  <div class="card-title">Automation</div>
-                  <p class="card-text">
-                    Streamline your business with custom automation tools.
+
+              <!-- Card 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images/logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 3"
+                  />
+                  <p class="text-sm text-red-500 uppercase font-semibold">
+                    Service
                   </p>
-                  <a href="#" class="read-more"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
+                  <p class="text-gray-600 text-sm">
+                    Promoting your business with impactful online strategies and
+                    content.
+                  </p>
+
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
                 </div>
               </div>
-              <!-- Service Card 4 -->
-              <div class="service-card">
-                <img
-                  src="https://via.placeholder.com/300x180"
-                  alt="Service 4"
-                />
-                <div class="card-body">
-                  <div class="card-title">Analytics</div>
-                  <p class="card-text">
-                    Turn data into insights using smart dashboards and tools.
+
+              <!-- card 4 -->
+                <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images//logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 2"
+                  />
+                  <p class="text-sm text-green-500 uppercase font-semibold">
+                    Service
                   </p>
-                  <a href="#" class="read-more"
-                    >Read More <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                  <p class="text-gray-600 text-sm">
+                    Creating intuitive and engaging user interfaces for modern
+                    experiences.
+                  </p>
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Prev/Next Buttons -->
+          <div
+            class="absolute inset-0 flex items-center justify-between px-2 md:px-4 z-10"
+          >
+            <button
+              class="swiper-button-prev-custom bg-white p-3 rounded-full shadow hover:bg-primary hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="swiper-button-next-custom bg-white p-3 rounded-full shadow hover:bg-primary hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -208,6 +322,9 @@
     <script>
       AOS.init();
     </script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
+    <script src="https://assets.codepen.io/16327/InertiaPlugin.min.js"></script>
     <script src="../scripts/barba.umd.min (1).js"></script>
     <script src="../scripts/gsap.min.js"></script>
     <script src="../scripts/jquery-3.7.1.min.js"></script>
@@ -218,5 +335,27 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+      });
+    </script>
   </body>
 </html>

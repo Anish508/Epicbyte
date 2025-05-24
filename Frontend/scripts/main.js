@@ -1,31 +1,3 @@
-/* document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector("video");
-    if (video) {
-        video.play();
-    }
-});
- */
-
-
-const imageList = [
-    "../images/img1.avif",
-    "../images/img2.avif",
-    "../images/img3.avif",
-    "../images/img4.avif",
-  ];
-
-  let current = 0;
-  const heroImage = document.getElementById("hero-image");
-
-  setInterval(() => {
-    current = (current + 1) % imageList.length;
-    heroImage.style.opacity = 0;
-    setTimeout(() => {
-      heroImage.src = imageList[current];
-      heroImage.style.opacity = 1;
-    }, 250);
-  }, 1500);
-
 function delay(n) {
   n = n || 2000;
   return new Promise((done) => {
@@ -56,14 +28,47 @@ function pageTransition() {
 }
 
 function contentAnimation() {
-  t1 = gsap.timeline();
+  const t1 = gsap.timeline();
   t1.from(".animate-this", {
     duration: 1,
     y: 30,
     stagger: 0.3,
-   /*  opacity: 0, */
     delay: 0.2,
   });
+}
+
+function initVideoAutoplay() {
+  const video = document.querySelector("video");
+  if (video) {
+    video.play().catch(() => {});
+  }
+}
+
+function initImageSlider() {
+  const heroImage = document.getElementById("hero-image");
+  if (!heroImage) return;
+
+  const imageList = [
+    "../images/img1.avif",
+    "../images/img2.avif",
+    "../images/img3.avif",
+    "../images/img4.avif",
+  ];
+
+  let current = 0;
+
+  if (window.imageSliderInterval) {
+    clearInterval(window.imageSliderInterval);
+  }
+
+  window.imageSliderInterval = setInterval(() => {
+    current = (current + 1) % imageList.length;
+    heroImage.style.opacity = 0;
+    setTimeout(() => {
+      heroImage.src = imageList[current];
+      heroImage.style.opacity = 1;
+    }, 250);
+  }, 2000);
 }
 
 $(function () {
@@ -73,7 +78,7 @@ $(function () {
     transitions: [
       {
         async leave(data) {
-          done = this.async();
+          const done = this.async();
           pageTransition();
           await delay(1000);
           done();
@@ -81,13 +86,18 @@ $(function () {
 
         async enter(data) {
           contentAnimation();
+          initImageSlider();
+          initVideoAutoplay();
+          autoSlide(); // ✅ Call here to reinitialize slider on new page
         },
 
         async once() {
           contentAnimation();
+          initImageSlider();
+          initVideoAutoplay();
+          autoSlide(); // ✅ Initial call
         },
       },
     ],
   });
 });
-

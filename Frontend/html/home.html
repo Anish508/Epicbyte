@@ -9,21 +9,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
 
   <body data-barba="wrapper">
-
     <div class="load-container">
       <div class="load-screen"></div>
     </div>
-    
+
     <div id="loader">
       <h3>Tomorrow's</h3>
       <h3>Brand</h3>
@@ -36,7 +43,16 @@
     </button>
 
     <nav class="menu navigation" aria-hidden="true">
-      <button class="btn-close" aria-label="Close menu" style="color:white;">&times;</button>
+      <button class="btn-close" aria-label="Close menu" style="color: white">
+        &times;
+      </button>
+      <button
+        class="btn-close"
+        aria-label="Close menu"
+        style="background-color: white"
+      >
+        &times;
+      </button>
       <ul class="links-container">
         <li><a href="./home.html" class="menu-link home">Home</a></li>
         <li><a href="#" class="menu-link places">Places</a></li>
@@ -45,37 +61,301 @@
       </ul>
     </nav>
 
-    <main class="hero" data-barba="container" data-barba-namespace="Home">
-      <div class="sub-hero">
-        <div class="sub-hero-left">
-          <h1>
-            <span>r</span><span>e</span><span>j</span><span>o</span
-            ><span>u</span><span>i</span><span>c</span><span>e</span>
-          </h1>
-          <h2 class="animate-this">Your Next Digital Journey Begins Here</h2>
-          <p class="animate-this">
-            Crafting experiences that resonate. Discover how Rejouice helps
-            brands grow with bold design and smart tech.
-          </p>
-          <div class="cta-buttons">
-            <button class="btn primary">Get Started</button>
-            <button class="btn secondary">Learn More</button>
+    <main
+      class="hero"
+      data-barba="container"
+      data-barba-namespace="Home"
+      style="margin-top: 14rem"
+    >
+      <div>
+        <div class="container" style="margin-top: 45rem">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="networking">
+                <h1>
+                  <span>B</span><span>O</span><span>D</span><span>H</span
+                  ><span>I</span><span>F</span><span>Y</span>
+                </h1>
+                <h2 class="display-5 heading animate-this">
+                  Networking <span class="brand-name"> solutions </span> for
+                  worldwide communication
+                </h2>
+                <p class="text-muted animate-this">
+                  We're a company that focuses on establishing long-term
+                  relationships with customers.
+                </p>
+                <button
+                  type="button"
+                  id="change-lang"
+                  class="btn btn-primary rounded-pill px-4 py-3 mt-8"
+                >
+                  Explore Now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="img">
+                <img
+                  src="https://img.freepik.com/free-vector/endpoint-concept-illustration_114360-6375.jpg?w=740&t=st=1666852595~exp=1666853195~hmac=3a207fff771155f287a29ed1dabc6ab37e6bdb5141a29c56711b772023ff9865"
+                  alt="communication"
+                  class="w-100"
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sub-hero-right">
-           <img id="hero-image" src="../images/img4.avif" alt="Rejouice Feature" />
+      </div>
+      <!-- Why to choose us -->
+      <div class="px-4 py-5 my-1 text-center mt-0">
+        <img
+          class="d-block mx-auto mb-4"
+          src="../images/logo.webp"
+          alt=""
+          width="150"
+          height="150"
+        />
+        <h1 class="display-5 fw-bold text-body-emphasis">
+          Why to choose Bodhify.tech?
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 gap-3"
+              fdprocessedid="hs6boh"
+            >
+              Primary button
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-lg px-4"
+              fdprocessedid="kmjmbf"
+            >
+              Secondary
+            </button>
+          </div>
         </div>
       </div>
+
+      <!--  services -->
+      <section class="w-full max-w-6xl mx-auto px-4 py-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800"
+        >
+          Our Services
+        </h2>
+
+        <!-- Swiper Container -->
+        <div class="relative">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Card 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images/logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 1"
+                  />
+                  <p class="text-sm text-blue-500 uppercase font-semibold">
+                    Service
+                  </p>
+                  <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                  <p class="text-gray-600 text-sm">
+                    We build scalable and fast web solutions tailored to your
+                    business goals.
+                  </p>
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images//logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 2"
+                  />
+                  <p class="text-sm text-green-500 uppercase font-semibold">
+                    Service
+                  </p>
+                  <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                  <p class="text-gray-600 text-sm">
+                    Creating intuitive and engaging user interfaces for modern
+                    experiences.
+                  </p>
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images/logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 3"
+                  />
+                  <p class="text-sm text-red-500 uppercase font-semibold">
+                    Service
+                  </p>
+                  <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
+                  <p class="text-gray-600 text-sm">
+                    Promoting your business with impactful online strategies and
+                    content.
+                  </p>
+
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 4 -->
+                <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-2xl p-6 shadow-md max-w-sm mx-auto"
+                >
+                  <img
+                    src="../images//logo.webp"
+                    class="rounded-lg mb-4 w-full h-48 object-cover"
+                    alt="Service 2"
+                  />
+                  <p class="text-sm text-green-500 uppercase font-semibold">
+                    Service
+                  </p>
+                  <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                  <p class="text-gray-600 text-sm">
+                    Creating intuitive and engaging user interfaces for modern
+                    experiences.
+                  </p>
+                  <div class="mt-8 flex justify-center">
+                    <a
+                      href="#"
+                      class="inline-block bg-blue-600 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition-all duration-300"
+                    >
+                      View More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prev/Next Buttons -->
+          <div
+            class="absolute inset-0 flex items-center justify-between px-2 md:px-4 z-10"
+          >
+            <button
+              class="swiper-button-prev-custom bg-white p-3 rounded-full shadow hover:bg-primary hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="swiper-button-next-custom bg-white p-3 rounded-full shadow hover:bg-primary hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
-  <script src="js/aos.min.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="../scripts/barba.umd.min (1).js"></script>
-  <script src="../scripts/gsap.min.js"></script>
-  <script src="../scripts/jquery-3.7.1.min.js"></script>
-  <script src="../scripts/main.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
+    <script src="https://assets.codepen.io/16327/InertiaPlugin.min.js"></script>
+    <script src="../scripts/barba.umd.min (1).js"></script>
+    <script src="../scripts/gsap.min.js"></script>
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/nav-script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+      });
+    </script>
   </body>
 </html>
